@@ -80,7 +80,11 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
 
-  animation: slide-back 0.2s;
+  transition: left 0.2s ease;
+}
+
+.light #switch button {
+  left: 50%;
 }
 
 .light #switch button:hover {
@@ -170,20 +174,4 @@ footer {
   }
 }
 /*animation*/
-@keyframes slide-in {
-  from {
-    left: 0;
-  }
-  to {
-    left: 50%;
-  }
-}
-
-@keyframes slide-in {
-  from {
-    left: 50%;
-  }
-  to {
-    left: 0;
-  }
-}
+/* O slide agora é feito por transição de left no botão do switch */
